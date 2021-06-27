@@ -35,13 +35,13 @@ export default function Login() {
         <div className="flex sm:w-3/5">
           <img src="/images/iphone-with-profile.jpg" alt="iPhone with Instagram app" />
         </div>
-        <div className="flex flex-col sm:w-2/5">
+        <div className="flex flex-col sm:w-2/5  sm:m-0 m-4">
           <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
             <h1 className="flex justify-center w-full">
               <img src="/images/logo.png" alt="Instagram" className="mt-2 w-6/12 mb-4" />
             </h1>
 
-            {error && <p className="mb-4 text-xs text-red-primary">{error}</p>}
+            {error && <p className="mb-4 text-xs text-red-700">{error}</p>}
 
             <form onSubmit={handleLogin} method="POST">
               <input
@@ -63,8 +63,7 @@ export default function Login() {
               <button
                   disabled={isInvalid}
                   type="submit"
-                  className={`bg-blue-medium text-white w-full rounded h-8 font-bold
-            ${isInvalid && 'opacity-50'}`}
+                  className={`w-full btn-primary transition duration-500 ease-in-out focus:outline-none focus:shadow-outline bg-indigo-700 hover:bg-indigo-900 text-white font-normal py-2 px-4 mr-1 rounded  ${isInvalid && 'bg-opacity-50'}`}
               >
                 Login
               </button>
@@ -82,3 +81,6 @@ export default function Login() {
       </div>
   );
 }
+
+//class="btn btn-purple hover:bg-bookmark-white hover:text-black"
+// btn-primary transition duration-300 ease-in-out focus:outline-none focus:shadow-outline bg-purple-700 hover:bg-purple-900 text-white font-normal py-2 px-4 mr-1 rounded
